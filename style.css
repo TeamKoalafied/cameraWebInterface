@@ -34,3 +34,6 @@ html,
 		height:40px;			/* Height of the footer */
 		background-color: royalblue;
 	}
+table#right-table {
+    float:right;
+}
