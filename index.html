@@ -7,37 +7,43 @@
     </head>
     
     <body>
-        <script src = "resolutionInput.js"></script>
+        <script src = "scripts.js"></script>
         <div id="container">
 
             <div id="body">
-                <table style="width:50%;">
-                    <tr>
-                        <td><img id = "regularCam" src="http://roborio-6996-frc.local:1185/stream.mjpg" style="margin-left:auto; margin-right:auto; width:60%; padding-left:20%;"></td>
-                    </tr>
-                </table>
-                <table style="width:50%;">
-                    <tr>
-                        <td><img id = "wideCam" style="width:100%;" src="http://roborio-6996-frc.local:1184/stream.mjpg" width=1280></td>
-                    </tr>
-                </table>
-                <table style="margin-left:auto; margin-right:auto;">
-                    <h1 style="text-align: center;">Camera Settings</h1>
-                    <tr>
-                        <th>Wide FOV-Cam</th>
-                        <th>Regular FOV-Cam</th>
-                    </tr>
-                    <tr>
-                        <td><p id = "demo1">Width:</p><input id="wideWidth"><button type="button" onclick="f_wideWidth()">Submit</button>
-                        <p id = "demo2">Height:</p>
-                        <input id="wideHeight">
-                        <button type="button" onclick="f_wideHeight()">Submit</button></td>
-                        <td><p id="demo3">Width:</p><input id="regularWidth"><button type="button" onclick="f_regularWidth()">Submit</button>
+            
+            <img id = "regularCam" src="http://roborio-6996-frc.local:1185/stream.mjpg" width = 640>
+            <br>
+            <button type = "button" onclick="fire">Fire</button>
+            <br>
+            <img id = "wideCam" src="http://roborio-6996-frc.local:1184/stream.mjpg" width=1280>
+                
+                
+            <table style="margin-left:auto; margin-right:auto;">
+                <h1 style="text-align: center;">Camera Settings</h1>
+                <tr>
+                    <th>Regular FOV-Cam</th>
+                    <th>Wide FOV-Cam</th>
+                </tr>
+                <tr>
+                    <td><p id="demo3">Width:</p>
+                        <button type="button" onclick='document.getElementById("regularCam").setAttribute("width", 640)'>Default</button>
+                        <input id="regularWidth">
+                        <button type="button" onclick="regularWidth()">Submit</button>
                         <p id = "demo4">Height:</p>
+                        <button type="button" onclick='document.getElementById("regularCam").setAttribute("height", 480)'>Default</button>
                         <input id="regularHeight">
-                        <button type="button" onclick="f_regularHeight()">Submit</button></td>
-                    </tr>
-                </table>
+                        <button type="button" onclick="regularHeight()">Submit</button></td>
+                    <td><p id = "demo1">Width:</p>
+                        <button type="button" onclick="document.getElementById('wideCam').setAttribute('width', 1280)">Default</button>
+                        <input id="wideWidth">
+                        <button type="button" onclick="wideWidth()">Submit</button>
+                        <p id = "demo2">Height:</p>
+                        <button type="button" onclick='document.getElementById("wideCam").setAttribute("height", 320)'>Default</button>
+                        <input id="wideHeight">
+                        <button type="button" onclick="wideHeight()">Submit</button></td>
+                </tr>
+            </table>
             </div>
 
             

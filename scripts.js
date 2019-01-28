@@ -1,4 +1,14 @@
-function f_wideWidth() {
+function extinguish() {
+    document.getElementById("regularCam").setAttribute("src", "http://roborio-6996-frc.local:1185/stream.mjpg");
+}
+
+function fire() {
+    document.getElementById("regularCam").setAttribute("src", "fire.jpg");
+    
+    setTimeout(extinguish, 500);
+}
+
+function wideWidth() {
   var x1;
 
   x1 = document.getElementById("wideWidth").value;
@@ -7,12 +17,13 @@ function f_wideWidth() {
     document.getElementById("demo1").innerHTML = "Input not valid";
   }
   else {
-      document.getElementById("wideCam").setAttribute("width", x1);     document.getElementById("demo1").innerHTML = "Width adjusted";
+      document.getElementById("wideCam").setAttribute("width", x1);     
+      document.getElementById("demo1").innerHTML = "Width adjusted";
       
   }
 }
 
-function f_wideHeight() {
+function wideHeight() {
   var x2;
 
   x2 = document.getElementById("wideHeight").value;
@@ -27,7 +38,7 @@ function f_wideHeight() {
   
 }
 
-function f_regularWidth() {
+function regularWidth() {
   var x3;
 
   x3 = document.getElementById("regularWidth").value;
@@ -41,7 +52,7 @@ function f_regularWidth() {
   }
 }
 
-function f_regularHeight() {
+function regularHeight() {
   var x4;
 
   x4 = document.getElementById("regularHeight").value;
