@@ -1,12 +1,3 @@
-function extinguish() {
-    document.getElementById("regularCam").setAttribute("src", "http://roborio-6996-frc.local:1185/stream.mjpg");
-}
-
-function fire() {
-    document.getElementById("regularCam").setAttribute("src", "fire.jpg");
-    
-    setTimeout(extinguish, 500);
-}
 
 function wideWidth() {
   var x1;
