@@ -9,12 +9,26 @@
     <body style="background-color: azure;">
         <script src = "scripts.js"></script>
         <div id="container">
-            <div id="body">
-            <img id = "regularCam" style = "float:left" src="http://10.69.96.88:1181/stream.mjpg" height = 480>
-            <p>  </p>
-            <img id = "regularCam"  style = "float:right" src="http://10.69.96.88:1182/stream.mjpg" height = 480>
-                
-            
+            <canvas id  = "rotatedCanvas" style = "float:left;-webkit-transform:rotate(180deg);
+			  -moz-transform: rotate(90deg);
+			  -ms-transform: rotate(90deg);
+			  -o-transform: rotate(90deg);
+			  transform: rotate(90deg); width:50%">Use a canvas-supported browser.
+			  </canvas>
+            <canvas id  = "regCanvas" style = "float:left; width:50%">Use a canvas-supported browser.
+			  </canvas>      
+            <script>
+				var canvas = document.querySelector('.rotatedCanvas');
+				var width = canvas.width = "320";
+				var height = canvas.height = "320";
+				var ctx = canvas.getContext('2d');
+				ctx.fillStyle = 'rgb(255, 0, 0)';
+				ctx.beginPath();
+				ctx.moveTo(120, 120);
+				ctx.lineTo(200,200);
+				// draw your path
+				ctx.fill();
+			</script>
                 
                 
 <!--
@@ -44,9 +58,7 @@
                 </tr>
             </table>
 -->
-            </div>
 
-            
         </div>
     </body>
 </html>
