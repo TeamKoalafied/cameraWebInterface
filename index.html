@@ -6,60 +6,26 @@
         <title>CameraStream - Team Koalafied</title>
     </head>
     
-    <body style="background-color: azure;">
-        <script src = "scripts.js"></script>
-        <div id="container">
-            <canvas id  = "rotatedCanvas" style = "float:left;-webkit-transform:rotate(180deg);
-			  -moz-transform: rotate(90deg);
-			  -ms-transform: rotate(90deg);
-			  -o-transform: rotate(90deg);
-			  transform: rotate(90deg); width:50%">Use a canvas-supported browser.
-			  </canvas>
-            <canvas id  = "regCanvas" style = "float:left; width:50%">Use a canvas-supported browser.
-			  </canvas>      
-            <script>
-				var canvas = document.querySelector('.rotatedCanvas');
-				var width = canvas.width = "320";
-				var height = canvas.height = "320";
-				var ctx = canvas.getContext('2d');
-				ctx.fillStyle = 'rgb(255, 0, 0)';
-				ctx.beginPath();
-				ctx.moveTo(120, 120);
-				ctx.lineTo(200,200);
-				// draw your path
-				ctx.fill();
+    <body style="background-color: azure;"> 
+		<script src = "scripts.js"></script>
+		<div id="container" style = "height=100%;">
+		<!-- for some reason all of the images are scaled to 300x150 !-->
+		<canvas id  = "frontCanvas" style = "width:50%; float:left;">Use a canvas-supported browser.</canvas>  
+		<canvas id  = "backCanvas" style = "width:50%; float:right; ">Use a canvas-supported browser.</canvas>	
+			<script>
+				var front_canvas = document.getElementById("frontCanvas");
+				var ctx = front_canvas.getContext("2d");
+				ctx.fillStyle = "#05FF00";
+				// height of rect is 150
+				// width of rect is 300
+				ctx.fillRect(147.5, 0, 3, 150);
+				
+				var back_canvas = document.getElementById("backCanvas");
+				var ctx2 = back_canvas.getContext("2d");
+				ctx2.fillStyle = "#05FF00";
+				ctx2.fillRect(147.5, 0, 3, 150);
 			</script>
-                
-                
-<!--
-            <table style="margin-left:auto; margin-right:auto;">
-                <h1 style="text-align: center;">Camera Settings</h1>
-                <tr>
-                    <th>Regular FOV-Cam</th>
-                    <th>Wide FOV-Cam</th>
-                </tr>
-                <tr>
-                    <td><p id="demo3">Width:</p>
-                        <button type="button" onclick='document.getElementById("regularCam").setAttribute("width", 640)'>Default</button>
-                        <input id="regularWidth">
-                        <button type="button" onclick="regularWidth()">Submit</button>
-                        <p id = "demo4">Height:</p>
-                        <button type="button" onclick='document.getElementById("regularCam").setAttribute("height", 480)'>Default</button>
-                        <input id="regularHeight">
-                        <button type="button" onclick="regularHeight()">Submit</button></td>
-                    <td><p id = "demo1">Width:</p>
-                        <button type="button" onclick="document.getElementById('wideCam').setAttribute('width', 1280)">Default</button>
-                        <input id="wideWidth">
-                        <button type="button" onclick="wideWidth()">Submit</button>
-                        <p id = "demo2">Height:</p>
-                        <button type="button" onclick='document.getElementById("wideCam").setAttribute("height", 320)'>Default</button>
-                        <input id="wideHeight">
-                        <button type="button" onclick="wideHeight()">Submit</button></td>
-                </tr>
-            </table>
--->
-
-        </div>
+		</div>
     </body>
 </html>
 

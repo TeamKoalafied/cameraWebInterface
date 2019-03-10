@@ -1,9 +1,9 @@
-#rotatedCanvas{
-	background-image: url(http://10.69.96.88:1183/stream.mjpg);
+#frontCanvas{
+	background-image: url(http://frcvision.local:1183/stream.mjpg);
 	background-size: 100% 100%;
 }
 
-#regCanvas{
-	background-image: url(http://10.69.96.88:1184/stream.mjpg);
+#backCanvas{
+	background-image: url(http://frcvision.local:1184/stream.mjpg);
 	background-size: 100% 100%;
 }
