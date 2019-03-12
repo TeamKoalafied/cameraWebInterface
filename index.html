@@ -5,27 +5,21 @@
         <meta charset="utf-8">
         <title>CameraStream - Team Koalafied</title>
     </head>
-    
     <body style="background-color: azure;"> 
-		<script src = "scripts.js"></script>
-		<div id="container" style = "height=100%;">
-		<!-- for some reason all of the images are scaled to 300x150 !-->
-		<canvas id  = "frontCanvas" style = "width:50%; float:left;">Use a canvas-supported browser.</canvas>  
-		<canvas id  = "backCanvas" style = "width:50%; float:right; ">Use a canvas-supported browser.</canvas>	
-			<script>
+		<canvas id  = "frontCanvas">Use a canvas-supported browser.</canvas>
+        <canvas id  = "backCanvas">Use a canvas-supported browser.</canvas>      
+            <script>
 				var front_canvas = document.getElementById("frontCanvas");
 				var ctx = front_canvas.getContext("2d");
 				ctx.fillStyle = "#05FF00";
 				// height of rect is 150
 				// width of rect is 300
-				ctx.fillRect(147.5, 0, 3, 150);
+				ctx.fillRect(0, 73.5, 300, 3);
 				
 				var back_canvas = document.getElementById("backCanvas");
 				var ctx2 = back_canvas.getContext("2d");
 				ctx2.fillStyle = "#05FF00";
-				ctx2.fillRect(147.5, 0, 3, 150);
+				ctx2.fillRect(0, 73.5, 300, 3);
 			</script>
-		</div>
     </body>
 </html>
-

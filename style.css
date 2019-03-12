@@ -1,9 +1,34 @@
 #frontCanvas{
-	background-image: url(http://frcvision.local:1183/stream.mjpg);
+	background-image: url(http://10.69.96.6:1183/stream.mjpg);
 	background-size: 100% 100%;
+	float:left;
+		-webkit-transform:rotate(180deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg); 
+		transform-origin:center; 
+		-webkit-transform-origin:center; 
+		-moz-transform-origin:center;
+		-ms-transform-origin:center;
+		height:300px;
+		width:400px;
 }
 
 #backCanvas{
-	background-image: url(http://frcvision.local:1184/stream.mjpg);
+	background-image: url(http://10.69.96.6:1184/stream.mjpg);
 	background-size: 100% 100%;
+	float:right;
+		-webkit-transform:rotate(180deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg); 
+		transform-origin:center; 
+		-webkit-transform-origin:center; 
+		-moz-transform-origin:center;
+		-ms-transform-origin:center;
+		height:300px;
+		width:400px;
+		float:right;
 }
